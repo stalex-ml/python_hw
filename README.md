@@ -19,10 +19,14 @@
 
 ```
 project/
-├── scraper.py            # весь код: парсинг + планировщик
 ├── artifacts/
-│   └── books_data.txt    # результат сбора (JSON Lines)
-└── README.md
+│   └── books_data.txt
+├── notebooks/
+│   └── HW_03_python_ds_2025.ipynb
+├── scraper.py
+├── README.md
+├── .gitignore
+└── requirements.txt
 ```
 
 > Папку `artifacts/` нужно создать заранее — скрипт её не создаёт
