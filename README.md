@@ -23,6 +23,8 @@ project/
 │   └── books_data.txt
 ├── notebooks/
 │   └── HW_03_python_ds_2025.ipynb
+├── tests/
+│   └── test_scraper.py
 ├── scraper.py
 ├── README.md
 ├── .gitignore
