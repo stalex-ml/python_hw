@@ -145,9 +145,13 @@ def scrape_books(is_save: bool = False) -> list:
 
     return books_data
 
-schedule.every().day.at("19:00").do(scrape_books, is_save=True)
-print("Планировщик запущен. Задача будет выполняться ежедневно в 19:00.")
+def main() -> None:
+    #Настраивает ежедневный запуск в 19:00.
+    schedule.every().day.at("19:00").do(scrape_books, is_save=True)
+    print("Планировщик запущен. Задача будет выполняться ежедневно в 19:00.")
+    while True:
+        schedule.run_pending()
+        time.sleep(30)
 
-while True:
-    schedule.run_pending()
-    time.sleep(30)
+if __name__ == '__main__':
+    main()
